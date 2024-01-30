@@ -1,39 +1,39 @@
-Raptoreum Core
+Stratanium Core
 ==========
 
-This is the official reference wallet for Raptoreum digital currency and comprises the backbone of the Raptoreum peer-to-peer network. You can [download Raptoreum Core](https://www.raptoreum.org/downloads/) or [build it yourself](#building) using the guides below.
+This is the official reference wallet for Stratanium digital currency and comprises the backbone of the Stratanium peer-to-peer network. You can [download Stratanium Core](https://www.stratanium.org/downloads/) or [build it yourself](#building) using the guides below.
 
 Running
 ---------------------
-The following are some helpful notes on how to run Raptoreum on your native platform.
+The following are some helpful notes on how to run Stratanium on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- `bin/raptoreum-qt` (GUI) or
-- `bin/raptoreumd` (headless)
+- `bin/stratanium-qt` (GUI) or
+- `bin/strataniumd` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run raptoreum-qt.exe.
+Unpack the files into a directory, and then run stratanium-qt.exe.
 
 ### OS X
 
-Drag Raptoreum-Qt to your applications folder, and then run Raptoreum-Qt.
+Drag Stratanium-Qt to your applications folder, and then run Stratanium-Qt.
 
 ### Need Help?
 
-* See the [Raptoreum documentation](https://docs.raptoreum.org)
+* See the [Stratanium documentation](https://docs.stratanium.org)
 for help and more information.
-* See the [Raptoreum Developer Documentation](https://raptoreum-docs.github.io/) 
+* See the [Stratanium Developer Documentation](https://stratanium-docs.github.io/) 
 for technical specifications and implementation details.
-* Ask for help on [Raptoreum Nation Discord](http://raptoreumchat.org)
-* Ask for help on the [Raptoreum Forum](https://raptoreum.org/forum)
+* Ask for help on [Stratanium Nation Discord](http://strataniumchat.org)
+* Ask for help on the [Stratanium Forum](https://stratanium.org/forum)
 
 Building
 ---------------------
-The following are developer notes on how to build Raptoreum Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Stratanium Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OS X Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -43,7 +43,7 @@ The following are developer notes on how to build Raptoreum Core on your native 
 
 Development
 ---------------------
-The Raptoreum Core repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The Stratanium Core repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Release Notes](release-notes.md)
@@ -59,8 +59,8 @@ The Raptoreum Core repo's [root README](/README.md) contains relevant informatio
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [Raptoreum Forum](https://raptoreum.org/forum), in the Development & Technical Discussion board.
-* Discuss on [Raptoreum Nation Discord](http://raptoreumchat.org)
+* Discuss on the [Stratanium Forum](https://stratanium.org/forum), in the Development & Technical Discussion board.
+* Discuss on [Stratanium Nation Discord](http://strataniumchat.org)
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

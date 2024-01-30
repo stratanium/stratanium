@@ -21,4 +21,4 @@ FORMS += \
     ../src/qt/forms/transactiondescdialog.ui
 
 RESOURCES += \
-    ../src/qt/raptoreum.qrc
+    ../src/qt/stratanium.qrc

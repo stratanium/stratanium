@@ -6,15 +6,15 @@ reset-files.bash
 *.tar.gz
 
 *.exe
-src/raptoreum
-src/raptoreumd
-src/raptoreum-cli
-src/raptoreum-tx
-src/test/test_raptoreum
-src/test/test_raptoreum_fuzzy
-src/qt/test/test_raptoreum-qt
+src/stratanium
+src/strataniumd
+src/stratanium-cli
+src/stratanium-tx
+src/test/test_stratanium
+src/test/test_stratanium_fuzzy
+src/qt/test/test_stratanium-qt
 src/qt/res/css/colors/*
-src/bench/bench_raptoreum
+src/bench/bench_stratanium
 
 # autoreconf
 Makefile.in
@@ -37,8 +37,8 @@ config.log
 config.status
 configure
 libtool
-src/config/raptoreum-config.h
-src/config/raptoreum-config.h.in
+src/config/stratanium-config.h
+src/config/stratanium-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
@@ -85,14 +85,14 @@ libconftest.dylib*
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-raptoreum-qt
-Raptoreum-Qt.app
+stratanium-qt
+Stratanium-Qt.app
 background.tiff*
 !/depends/Makefile
 
 # Unit-tests
 Makefile.test
-raptoreum-qt_test
+stratanium-qt_test
 
 # Resources cpp
 qrc_*.cpp
@@ -106,7 +106,7 @@ build
 *.gcno
 *.gcda
 /*.info
-test_raptoreum.coverage/
+test_stratanium.coverage/
 total.coverage/
 coverage_percent.txt
 
@@ -124,15 +124,15 @@ test/cache/*
 .autotools
 /doc/doxygen/
 
-libraptoreumconsensus.pc
+libstrataniumconsensus.pc
 contrib/devtools/split-debug.sh
-src/qt/raptoreum-qt.bash
+src/qt/stratanium-qt.bash
 qa/pull-tester/tests-config.sh
 
 #development symlinks
-raptoreum-cli
-raptoreumd
-raptoreum-qt
+stratanium-cli
+strataniumd
+stratanium-qt
 make
 
 /docker/bin
@@ -149,6 +149,6 @@ dist/
 *.conf
 .settings/language.settings.xml
 
-/raptoreum.iml
+/stratanium.iml
 /testnet3_binary/
 /testnet4/

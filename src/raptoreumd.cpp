@@ -1,12 +1,12 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2021 The Dash Core developers
-// Copyright (c) 2020-2022 The Raptoreum developers
+// Copyright (c) 2020-2022 The Stratanium developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/raptoreum-config.h>
+#include <config/stratanium-config.h>
 #endif
 
 #include <chainparams.h>
@@ -33,8 +33,8 @@
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called Raptoreum (https://www.raptoreum.org/),
- * which enables instant payments to anyone, anywhere in the world. Raptoreum uses peer-to-peer technology to operate
+ * This is the developer documentation of the reference client for an experimental new digital currency called Stratanium (https://www.stratanium.org/),
+ * which enables instant payments to anyone, anywhere in the world. Stratanium uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network.
  *
  * The software is a community-driven open source project, released under the MIT license.
@@ -63,7 +63,7 @@ bool AppInit(int argc, char* argv[])
     //
     // Parameters
     //
-    // If Qt is used, parameters/raptoreum.conf are parsed in qt/dash.cpp's main()
+    // If Qt is used, parameters/stratanium.conf are parsed in qt/dash.cpp's main()
     SetupServerArgs();
 #if HAVE_DECL_DAEMON
     gArgs.AddArg("-daemon", "Run in the background as a daemon and accept commands", false, OptionsCategory::OPTIONS);
@@ -87,7 +87,7 @@ bool AppInit(int argc, char* argv[])
         else
         {
             strUsage += "\nUsage:\n"
-                  "  raptoreumd [options]                     " + strprintf("Start %s Daemon", PACKAGE_NAME) + "\n";
+                  "  strataniumd [options]                     " + strprintf("Start %s Daemon", PACKAGE_NAME) + "\n";
 
             strUsage += "\n" + gArgs.GetHelpMessage();
         }
@@ -127,12 +127,12 @@ bool AppInit(int argc, char* argv[])
         // Error out when loose non-argument tokens are encountered on command line
         for (int i = 1; i < argc; i++) {
             if (!IsSwitchChar(argv[i][0])) {
-                fprintf(stderr, "Error: Command line contains unexpected token '%s', see raptoreumd -h for a list of options.\n", argv[i]);
+                fprintf(stderr, "Error: Command line contains unexpected token '%s', see strataniumd -h for a list of options.\n", argv[i]);
                 return false;
             }
         }
 
-        // -server defaults to true for raptoreumd but not for the GUI so do this here
+        // -server defaults to true for strataniumd but not for the GUI so do this here
         gArgs.SoftSetBoolArg("-server", true);
         // Set this early so that parameter interactions go to console
         InitLogging();
@@ -159,7 +159,7 @@ bool AppInit(int argc, char* argv[])
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 #endif
-            fprintf(stdout, "Raptoreum Core server starting\n");
+            fprintf(stdout, "Stratanium Core server starting\n");
 
             // Daemonize
             if (daemon(1, 0)) { // don't chdir (1), do close FDs (0)
@@ -203,7 +203,7 @@ int main(int argc, char* argv[])
 
     SetupEnvironment();
 
-    // Connect raptoreumd signal handlers
+    // Connect strataniumd signal handlers
     noui_connect();
 
     return (AppInit(argc, argv) ? EXIT_SUCCESS : EXIT_FAILURE);

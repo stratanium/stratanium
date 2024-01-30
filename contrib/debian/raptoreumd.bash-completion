@@ -1,2 +1,2 @@
-contrib/raptoreumd.bash-completion	raptoreumd
-contrib/raptoreum-cli.bash-completion    raptoreum-cli
+contrib/strataniumd.bash-completion	strataniumd
+contrib/stratanium-cli.bash-completion    stratanium-cli

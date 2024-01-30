@@ -1,6 +1,6 @@
 [Protocol]
-exec=raptoreum-qt '%u'
-protocol=raptoreum
+exec=stratanium-qt '%u'
+protocol=stratanium
 input=none
 output=none
 helper=true

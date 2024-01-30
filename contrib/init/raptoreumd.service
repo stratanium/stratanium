@@ -1,15 +1,15 @@
 [Unit]
-Description=Raptoreum's distributed currency daemon
+Description=Stratanium's distributed currency daemon
 After=network.target
 
 [Service]
-User=raptoreumcore
-Group=raptoreumcore
+User=strataniumcore
+Group=strataniumcore
 
 Type=forking
-PIDFile=/var/lib/raptoreumd/raptoreumd.pid
-ExecStart=/usr/bin/raptoreumd -daemon -pid=/var/lib/raptoreumd/raptoreumd.pid \
--conf=/etc/raptoreumcore/raptoreum.conf -datadir=/var/lib/raptoreumd -disablewallet
+PIDFile=/var/lib/strataniumd/strataniumd.pid
+ExecStart=/usr/bin/strataniumd -daemon -pid=/var/lib/strataniumd/strataniumd.pid \
+-conf=/etc/strataniumcore/stratanium.conf -datadir=/var/lib/strataniumd -disablewallet
 
 Restart=always
 PrivateTmp=true

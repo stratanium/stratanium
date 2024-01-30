@@ -1,5 +1,5 @@
-Building Raptoreum
+Building Stratanium
 =============
 
 See doc/build-*.md for instructions on building the various
-elements of the Raptoreum Core reference implementation of Raptoreum.
+elements of the Stratanium Core reference implementation of Stratanium.

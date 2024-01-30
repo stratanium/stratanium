@@ -2,26 +2,26 @@
 
 # backward compatibility for existing gentoo layout 
 #
-if [ -d "/var/lib/raptoreumcore/.raptoreumcore" ]; then
-	BITCOIND_DEFAULT_DATADIR="/var/lib/raptoreumcore/.raptoreumcore"
+if [ -d "/var/lib/strataniumcore/.strataniumcore" ]; then
+	BITCOIND_DEFAULT_DATADIR="/var/lib/strataniumcore/.strataniumcore"
 else
-	BITCOIND_DEFAULT_DATADIR="/var/lib/raptoreumd"
+	BITCOIND_DEFAULT_DATADIR="/var/lib/strataniumd"
 fi
 
-BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/raptoreumcore/raptoreum.conf}
-BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/raptoreumd}
-BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/raptoreumd.pid}
+BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/strataniumcore/stratanium.conf}
+BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/strataniumd}
+BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/strataniumd.pid}
 BITCOIND_DATADIR=${BITCOIND_DATADIR:-${BITCOIND_DEFAULT_DATADIR}}
-BITCOIND_USER=${BITCOIND_USER:-${BITCOIN_USER:-raptoreumcore}}
-BITCOIND_GROUP=${BITCOIND_GROUP:-raptoreumcore}
-BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/raptoreumd}
+BITCOIND_USER=${BITCOIND_USER:-${BITCOIN_USER:-strataniumcore}}
+BITCOIND_GROUP=${BITCOIND_GROUP:-strataniumcore}
+BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/strataniumd}
 BITCOIND_NICE=${BITCOIND_NICE:-${NICELEVEL:-0}}
 BITCOIND_OPTS="${BITCOIND_OPTS:-${BITCOIN_OPTS}}"
 
-name="Raptoreum Core Daemon"
-description="Raptoreum cryptocurrency P2P network daemon"
+name="Stratanium Core Daemon"
+description="Stratanium cryptocurrency P2P network daemon"
 
-command="/usr/bin/raptoreumd"
+command="/usr/bin/strataniumd"
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \
 		-conf=\"${BITCOIND_CONFIGFILE}\" \
 		-datadir=\"${BITCOIND_DATADIR}\" \
@@ -71,7 +71,7 @@ checkconfig()
 {
 	if ! grep -qs '^rpcpassword=' "${BITCOIND_CONFIGFILE}" ; then
 		eerror ""
-		eerror "ERROR: You must set a secure rpcpassword to run raptoreumd."
+		eerror "ERROR: You must set a secure rpcpassword to run strataniumd."
 		eerror "The setting must appear in ${BITCOIND_CONFIGFILE}"
 		eerror ""
 		eerror "This password is security critical to securing wallets "
@@ -84,7 +84,7 @@ checkconfig()
 		eerror "It is recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
-		eerror "ie: alertnotify=echo %%s | mail -s \"Raptoreum Core Alert\"" \
+		eerror "ie: alertnotify=echo %%s | mail -s \"Stratanium Core Alert\"" \
 			"admin@foo.com"
 		eerror ""
 		return 1

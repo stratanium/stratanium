@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/raptoreum-config.h>
+#include <config/stratanium-config.h>
 #endif
 
 #include <clientversion.h>
@@ -94,10 +94,10 @@ static int AppInitRawTx(int argc, char* argv[])
     if (argc<2 || gArgs.IsArgSet("-?") || gArgs.IsArgSet("-h") || gArgs.IsArgSet("-help"))
     {
         // First part of help message is specific to this utility
-        std::string strUsage = strprintf("%s raptoreum-tx utility version", PACKAGE_NAME) + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = strprintf("%s stratanium-tx utility version", PACKAGE_NAME) + " " + FormatFullVersion() + "\n\n" +
             "Usage:\n"
-              "  raptoreum-tx [options] <hex-tx> [commands]  Update hex-encoded raptoreum transaction\n" +
-              "  raptoreum-tx [options] -create [commands]   Create hex-encoded raptoreum transaction\n" +
+              "  stratanium-tx [options] <hex-tx> [commands]  Update hex-encoded stratanium transaction\n" +
+              "  stratanium-tx [options] -create [commands]   Create hex-encoded stratanium transaction\n" +
               "\n";
         strUsage += gArgs.GetHelpMessage();
 
@@ -739,7 +739,7 @@ static int CommandLineRawTx(int argc, char* argv[])
             if (argc < 2)
                 throw std::runtime_error("too few parameters");
 
-            // param: hex-encoded raptoreum transaction
+            // param: hex-encoded stratanium transaction
             std::string strHexTx(argv[1]);
             if (strHexTx == "-")                 // "-" implies standard input
                 strHexTx = readStdin();

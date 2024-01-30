@@ -1,11 +1,11 @@
 Sample configuration files for:
 ```
-SystemD: raptoreumd.service
-Upstart: raptoreumd.conf
-OpenRC:  raptoreumd.openrc
-         raptoreumd.openrcconf
-CentOS:  raptoreumd.init
-OS X:    org.raptoreum.raptoreumd.plist
+SystemD: strataniumd.service
+Upstart: strataniumd.conf
+OpenRC:  strataniumd.openrc
+         strataniumd.openrcconf
+CentOS:  strataniumd.init
+OS X:    org.stratanium.strataniumd.plist
 ```
 have been made available to assist packagers in creating node packages here.
 

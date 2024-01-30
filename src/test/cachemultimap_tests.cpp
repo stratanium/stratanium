@@ -1,9 +1,9 @@
 // Copyright (c) 2014-2019 The Dash Core developers
-// Copyright (c) 2020-2022 The Raptoreum developers
+// Copyright (c) 2020-2022 The Stratanium developers
 
 #include <cachemultimap.h>
 
-#include <test/test_raptoreum.h>
+#include <test/test_stratanium.h>
 
 #include <algorithm>
 #include <iostream>
